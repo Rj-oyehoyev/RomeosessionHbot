@@ -1,19 +1,12 @@
 import os
 import asyncio
 import logging
-from config import Config
+from config import *
 from pyrogram import Client
 from rich.console import Console
 from rich.table import Table
 from Romeo.Helpers.data import LOG_TEXT
 from pyromod import listen 
-
-#getting variables
-API_ID = Config.API_ID
-API_HASH = Config.API_HASH
-TOKEN = Config.TOKEN
-START_PIC = Config.START_PIC
-
 
 
 if not START_PIC:
@@ -27,10 +20,10 @@ logging.basicConfig(level=logging.INFO)
 
 #client
 app = Client(
-    "SupremeStark",
+    "romeorj",
     api_id = API_ID,
     api_hash = API_HASH,
-    bot_token = TOKEN )
+    bot_token = BOT_TOKEN )
     
 
 
