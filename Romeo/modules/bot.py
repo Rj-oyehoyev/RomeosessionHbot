@@ -1,5 +1,6 @@
 import os
-from Romeo import app,API_ID,API_HASH
+from Romeo import app
+from config import *
 from pyrogram import filters , Client
 from Romeo.Helpers.rj import (
     users_gc,
