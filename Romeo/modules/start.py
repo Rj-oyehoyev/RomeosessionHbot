@@ -1,8 +1,8 @@
 from pyrogram import filters
-from Romeo import app , START_PIC
+from Romeo import app
 from Romeo.Helpers.data import PM_TEXT,PM_BUTTON,HACK_MODS,HACK_TEXT
 from pyrogram.types import CallbackQuery
-
+from config import *
 
 @app.on_message(filters.command("start") & filters.private)
 async def _start(_, message):
