@@ -4,7 +4,7 @@ from pyrogram import Client , enums
 from telethon import TelegramClient
 from telethon.sessions import StringSession 
 from pyrogram.raw import functions 
-from config import API_ID, API_HASH
+from config import *
 
 from telethon.tl.functions.channels import GetAdminedPublicChannelsRequest , JoinChannelRequest as join , LeaveChannelRequest as leave , DeleteChannelRequest as dc
 from Romeo.Helpers.data import info
