@@ -24,7 +24,7 @@
             "required": true
         },
         "START_PIC": {
-            "description": "your bot token from @BotFather",
+            "description": "upload any pic on telegram and link paste hare.",
             "required": true
             "value": "https://telegra.ph//file/87fa102aa588b71f43b08.jpg"
         }
